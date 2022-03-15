@@ -103,7 +103,7 @@ for section in parser.sections():
 #region 
 def user_id_authentication(user_id):
     # With Reader User :
-    client = MongoClient("mongodb+srv://reader101:jfX7t66Cavm3VAwM@cluster0.xpdoo.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
+    client = MongoClient("mongodb+srv://reader101:jfX7t66Cavm3VAwM@cluster0.xpdoo.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"),tlsCAFile=certifi.where())
     # Targeted Database
     cobra_database = client["cobra"]
     # Targeted Collection
